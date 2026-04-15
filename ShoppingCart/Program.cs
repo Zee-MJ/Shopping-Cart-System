@@ -38,7 +38,14 @@ class Program
             Console.WriteLine("3 - Checkout");
             Console.WriteLine("4 - Exit");
             Console.Write("\nSelect an option: ");
-            int choice = Convert.ToInt32(Console.ReadLine());
+            string? input = Console.ReadLine();
+            int choice;
+
+            if (!int.TryParse(input, out choice))
+            {
+                Console.WriteLine("Invalid option, please enter a number (1-4).");
+                continue;
+            }
 
             if (choice == 1)
             {
@@ -55,12 +62,12 @@ class Program
                     Console.WriteLine("Type D to finish adding");
                     Console.WriteLine("Type 0 to go back");
 
-                    string? input = Console.ReadLine();
+                    string? productInput = Console.ReadLine();
 
                     if (string.Equals(input, "D", StringComparison.OrdinalIgnoreCase))
                     {
                         Console.WriteLine("Finished adding items.");
-                        break; // only exits product loop
+                        break;
                     }
 
                     int id;
@@ -73,7 +80,7 @@ class Program
 
                     if (id == 0)
                     {
-                        break; // go back to main menu safely
+                        break;
                     }
 
                     Product? selected = null;
@@ -90,7 +97,7 @@ class Program
                     if (selected == null)
                     {
                         Console.WriteLine("Product not found.");
-                        continue; // don't exit program
+                        continue;
                     }
 
                     Console.Write("Enter quantity: ");
@@ -104,6 +111,7 @@ class Program
                     if (cartCount + quantity > 15)
                     {
                         Console.WriteLine("Not enough space in cart!");
+                        continue;
                     }
                     else
                     {
@@ -134,13 +142,13 @@ class Program
             {
                 double total = 0;
 
-                // compute total
+                
                 for (int i = 0; i < cartCount; i++)
                 {
                     total += cart[i].Price;
                 }
 
-                // DISCOUNT LOGIC
+                
                 if (total >= 5000)
                 {
                     double discount = total * 0.10;
@@ -157,7 +165,13 @@ class Program
                 while (true)
                 {
                     Console.Write("Enter payment amount: ");
-                    payment = Convert.ToDouble(Console.ReadLine());
+                    string? payInput = Console.ReadLine();
+
+                    if (!double.TryParse(payInput, out payment))
+                    {
+                        Console.WriteLine("Invalid payment. Please enter a number.");
+                        continue;
+                    }
 
                     if (payment >= total)
                     {
