@@ -64,24 +64,24 @@ class Program
 
                     string? productInput = Console.ReadLine();
 
-                    if (string.Equals(input, "D", StringComparison.OrdinalIgnoreCase))
+                    if (string.Equals(productInput, "D", StringComparison.OrdinalIgnoreCase))
                     {
                         Console.WriteLine("Finished adding items.");
                         break;
                     }
 
-                    int id;
+                int id;
 
-                    if (!int.TryParse(input, out id))
-                    {
-                        Console.WriteLine("Invalid input.");
-                        continue;
-                    }
+                if (!int.TryParse(productInput, out id))
+                {
+                    Console.WriteLine("Invalid input.");
+                    continue;
+                }
 
-                    if (id == 0)
-                    {
-                        break;
-                    }
+                if (id == 0)
+                {
+                    break;
+            }
 
                     Product? selected = null;
 
@@ -101,7 +101,14 @@ class Program
                     }
 
                     Console.Write("Enter quantity: ");
-                    int quantity = Convert.ToInt32(Console.ReadLine());
+                    string? qtyInput = Console.ReadLine();
+                    int quantity;
+
+                    if (!int.TryParse(qtyInput, out quantity))
+                    {
+                        Console.WriteLine("Invalid quantity. Please enter a number.");
+                        continue;
+                    }
 
                     if (quantity <= 0 || quantity > selected.Stock)
                     {
