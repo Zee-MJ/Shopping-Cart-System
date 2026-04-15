@@ -27,7 +27,7 @@ class Program
             new Product(2, "Leebit", 350, 50),
             new Product(3, "Puppym", 350, 30)
         };
-        Product[] cart = new Product[100];
+        Product[] cart = new Product[15];
         int cartCount = 0;
 
         while (true)
@@ -101,9 +101,14 @@ class Program
                         Console.WriteLine("Invalid or insufficient stock.");
                         continue;
                     }
-
                     for (int i = 0; i < quantity; i++)
                     {
+                        if (cartCount >= 15)
+                        {
+                            Console.WriteLine("Cart is full!");
+                            break;
+                        }
+
                         cart[cartCount] = selected;
                         cartCount++;
                     }

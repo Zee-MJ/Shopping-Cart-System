@@ -26,3 +26,32 @@ C:\Users\Marienor\Downloads\C# Project\ShoppingCart\obj\Debug\net10.0\refint\Sho
 C:\Users\Marienor\Downloads\C# Project\ShoppingCart\obj\Debug\net10.0\ShoppingCart.pdb
 C:\Users\Marienor\Downloads\C# Project\ShoppingCart\obj\Debug\net10.0\ShoppingCart.genruntimeconfig.cache
 C:\Users\Marienor\Downloads\C# Project\ShoppingCart\obj\Debug\net10.0\ref\ShoppingCart.dll
+c:\Users\Marienor\OneDrive - TBG SHARED SERVICES, INC\Desktop\C# Project\ShoppingCart\bin\Debug\net10.0\appsettings.Development.json
+c:\Users\Marienor\OneDrive - TBG SHARED SERVICES, INC\Desktop\C# Project\ShoppingCart\bin\Debug\net10.0\appsettings.json
+c:\Users\Marienor\OneDrive - TBG SHARED SERVICES, INC\Desktop\C# Project\ShoppingCart\bin\Debug\net10.0\ShoppingCart.staticwebassets.endpoints.json
+c:\Users\Marienor\OneDrive - TBG SHARED SERVICES, INC\Desktop\C# Project\ShoppingCart\bin\Debug\net10.0\ShoppingCart.exe
+c:\Users\Marienor\OneDrive - TBG SHARED SERVICES, INC\Desktop\C# Project\ShoppingCart\bin\Debug\net10.0\ShoppingCart.deps.json
+c:\Users\Marienor\OneDrive - TBG SHARED SERVICES, INC\Desktop\C# Project\ShoppingCart\bin\Debug\net10.0\ShoppingCart.runtimeconfig.json
+c:\Users\Marienor\OneDrive - TBG SHARED SERVICES, INC\Desktop\C# Project\ShoppingCart\bin\Debug\net10.0\ShoppingCart.dll
+c:\Users\Marienor\OneDrive - TBG SHARED SERVICES, INC\Desktop\C# Project\ShoppingCart\bin\Debug\net10.0\ShoppingCart.pdb
+c:\Users\Marienor\OneDrive - TBG SHARED SERVICES, INC\Desktop\C# Project\ShoppingCart\obj\Debug\net10.0\rpswa.dswa.cache.json
+c:\Users\Marienor\OneDrive - TBG SHARED SERVICES, INC\Desktop\C# Project\ShoppingCart\obj\Debug\net10.0\ShoppingCart.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\Marienor\OneDrive - TBG SHARED SERVICES, INC\Desktop\C# Project\ShoppingCart\obj\Debug\net10.0\ShoppingCart.AssemblyInfoInputs.cache
+c:\Users\Marienor\OneDrive - TBG SHARED SERVICES, INC\Desktop\C# Project\ShoppingCart\obj\Debug\net10.0\ShoppingCart.AssemblyInfo.cs
+c:\Users\Marienor\OneDrive - TBG SHARED SERVICES, INC\Desktop\C# Project\ShoppingCart\obj\Debug\net10.0\ShoppingCart.csproj.CoreCompileInputs.cache
+c:\Users\Marienor\OneDrive - TBG SHARED SERVICES, INC\Desktop\C# Project\ShoppingCart\obj\Debug\net10.0\ShoppingCart.MvcApplicationPartsAssemblyInfo.cache
+c:\Users\Marienor\OneDrive - TBG SHARED SERVICES, INC\Desktop\C# Project\ShoppingCart\obj\Debug\net10.0\ShoppingCart.sourcelink.json
+c:\Users\Marienor\OneDrive - TBG SHARED SERVICES, INC\Desktop\C# Project\ShoppingCart\obj\Debug\net10.0\rjimswa.dswa.cache.json
+c:\Users\Marienor\OneDrive - TBG SHARED SERVICES, INC\Desktop\C# Project\ShoppingCart\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
+c:\Users\Marienor\OneDrive - TBG SHARED SERVICES, INC\Desktop\C# Project\ShoppingCart\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
+c:\Users\Marienor\OneDrive - TBG SHARED SERVICES, INC\Desktop\C# Project\ShoppingCart\obj\Debug\net10.0\scopedcss\bundle\ShoppingCart.styles.css
+c:\Users\Marienor\OneDrive - TBG SHARED SERVICES, INC\Desktop\C# Project\ShoppingCart\obj\Debug\net10.0\staticwebassets.build.json
+c:\Users\Marienor\OneDrive - TBG SHARED SERVICES, INC\Desktop\C# Project\ShoppingCart\obj\Debug\net10.0\staticwebassets.build.json.cache
+c:\Users\Marienor\OneDrive - TBG SHARED SERVICES, INC\Desktop\C# Project\ShoppingCart\obj\Debug\net10.0\staticwebassets.development.json
+c:\Users\Marienor\OneDrive - TBG SHARED SERVICES, INC\Desktop\C# Project\ShoppingCart\obj\Debug\net10.0\staticwebassets.build.endpoints.json
+c:\Users\Marienor\OneDrive - TBG SHARED SERVICES, INC\Desktop\C# Project\ShoppingCart\obj\Debug\net10.0\swae.build.ex.cache
+c:\Users\Marienor\OneDrive - TBG SHARED SERVICES, INC\Desktop\C# Project\ShoppingCart\obj\Debug\net10.0\ShoppingCart.dll
+c:\Users\Marienor\OneDrive - TBG SHARED SERVICES, INC\Desktop\C# Project\ShoppingCart\obj\Debug\net10.0\refint\ShoppingCart.dll
+c:\Users\Marienor\OneDrive - TBG SHARED SERVICES, INC\Desktop\C# Project\ShoppingCart\obj\Debug\net10.0\ShoppingCart.pdb
+c:\Users\Marienor\OneDrive - TBG SHARED SERVICES, INC\Desktop\C# Project\ShoppingCart\obj\Debug\net10.0\ShoppingCart.genruntimeconfig.cache
+c:\Users\Marienor\OneDrive - TBG SHARED SERVICES, INC\Desktop\C# Project\ShoppingCart\obj\Debug\net10.0\ref\ShoppingCart.dll
