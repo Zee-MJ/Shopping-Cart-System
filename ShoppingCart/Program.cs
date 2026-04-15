@@ -101,22 +101,21 @@ class Program
                         Console.WriteLine("Invalid or insufficient stock.");
                         continue;
                     }
-                    for (int i = 0; i < quantity; i++)
+                    if (cartCount + quantity > 15)
                     {
-                        if (cartCount >= 15)
-                        {
-                            Console.WriteLine("Cart is full!");
-                            break;
-                        }
-
-                        cart[cartCount] = selected;
-                        cartCount++;
+                        Console.WriteLine("Not enough space in cart!");
                     }
-                
-
-                    selected.Stock -= quantity;
-
-                    Console.WriteLine("Added to cart!");
+                    else
+                    {
+                        for (int i = 0; i < quantity; i++)
+                        {
+                            cart[cartCount] = selected;
+                            cartCount++;
+                     
+                        }
+                        selected.Stock -= quantity;
+                        Console.WriteLine("Added to cart!");
+                    }
                 }
             }
 
