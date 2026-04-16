@@ -23,9 +23,9 @@ class Program
     {
         List<Product> products = new List<Product>()
         {
-            new Product(1, "Quokka", 350, 10),
-            new Product(2, "Leebit", 350, 50),
-            new Product(3, "Puppym", 350, 30)
+            new Product(1, "SKZOO Teddy Bear", 850, 10000),
+            new Product(2, "SKZ DOIT Album [SEALED]", 650, 5000),
+            new Product(3, "SKZOO Tamagotchi(LIMITED ADDITION)", 600, 1000)
         };
         Product[] cart = new Product[15];
         int cartCount = 0;
