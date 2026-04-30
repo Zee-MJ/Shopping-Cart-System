@@ -6,18 +6,18 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("-- Welcome to my shop --");
+        Console.WriteLine("-- WELCOME TO SKZ MERCH SHOP --");
 
         //Array
         Product[] products = new Product[7];
 
-        products[0] = new Product { ID = 1, Name = "Candy", Price = 10, RemainingStock = 5, Category = "Snacks" };
-        products[1] = new Product { ID = 2, Name = "Cookie", Price = 20, RemainingStock = 3, Category = "Snacks" };
-        products[2] = new Product { ID = 3, Name = "Juice", Price = 15, RemainingStock = 4, Category = "Beverages" };
-        products[3] = new Product { ID = 4, Name = "Tablet", Price = 8000, RemainingStock = 5, Category = "Electronics" };
-        products[4] = new Product { ID = 5, Name = "Headset", Price = 1500, RemainingStock = 12, Category = "Electronics" };
-        products[5] = new Product { ID = 6, Name = "Lego", Price = 500, RemainingStock = 6, Category = "Toys" };
-        products[6] = new Product { ID = 7, Name = "Teddy Bear", Price = 900, RemainingStock = 15, Category = "Toys" };
+        products[0] = new Product { ID = 1, Name = "Skz Light Stick (Nachimbong)", Price = 2500, RemainingStock = 80, Category = "Official" };
+        products[1] = new Product { ID = 2, Name = "Skzoo Plush (Set)", Price = 500, RemainingStock = 250, Category = "Official" };
+        products[2] = new Product { ID = 3, Name = "Varsity Jacket(STAY Edition)", Price = 650, RemainingStock = 500, Category = "Jacket" };
+        products[3] = new Product { ID = 4, Name = "DOIT BluetoothSpeaker", Price = 1000, RemainingStock = 350, Category = "Electronics" };
+        products[4] = new Product { ID = 5, Name = "Skzoo Bluetooth Headphones", Price = 1500, RemainingStock = 247, Category = "Electronics" };
+        products[5] = new Product { ID = 6, Name = "SKZOO Acrylic Keychain(Random Blind Pack)", Price = 125, RemainingStock = 10000, Category = "FanMade" };
+        products[6] = new Product { ID = 7, Name = "SKZ polaroid-style sticker pack(5 pcs)", Price = 50, RemainingStock = 15, Category = "FanMade" };
 
         bool running = true;
         int cartCount = 0;
@@ -74,14 +74,12 @@ class Program
                                 Console.Write("\nEnter product name to search (or type 'back' to exit): ");
                                 string searchName = Console.ReadLine().ToLower();
 
-                                // Check agad kung gustong bumalik sa menu
                                 if (searchName == "back")
                                 {
                                     searching = false;
                                     break;
                                 }
 
-                                // 2. Search Logic
                                 bool found = false;
                                 foreach (Product p in products)
                                 {
@@ -119,16 +117,15 @@ class Program
 
                                 switch (searchCategory)
                                 {
-                                    case "1": selectedCategory = "Snacks"; break;
-                                    case "2": selectedCategory = "Beverages"; break;
+                                    case "1": selectedCategory = "Official"; break;
+                                    case "2": selectedCategory = "Jacket"; break;
                                     case "3": selectedCategory = "Electronics"; break;
-                                    case "4": selectedCategory = "Toys"; break;
+                                    case "4": selectedCategory = "FanMade"; break;
                                     default:
                                         Console.WriteLine("Invalid category! Try again.");
-                                        continue; // Babalik sa taas ng while loop
+                                        continue; 
                                 }
 
-                                //display products
                                 Console.WriteLine($"\n--- {selectedCategory} Items ---");
                                 foreach (Product p in products)
                                 {
@@ -138,7 +135,7 @@ class Program
                                     }
                                 }
                             }
-                            break; //case 3 break
+                            break;
 
                         case "4":
                             Console.WriteLine("Returning to main menu...");
@@ -181,7 +178,7 @@ class Program
                                         if (index >= 0 && index < cartCount)
                                         {
                                             cart[index].RemainingStock += quantities[index];
-                                            // Array Shifting Logic
+
                                             for (int i = index; i < cartCount - 1; i++)
                                             {
                                                 cart[i] = cart[i + 1];
@@ -239,7 +236,25 @@ class Program
                                         bill += sub;
                                     }
                                     if (bill >= 5000) { double disc = bill * 0.1; bill -= disc; Console.WriteLine("Discount: " + disc); }
-                                    Console.WriteLine($"\nTOTAL: PHP {bill:N2}");
+                                    double originalTotal = 0;
+
+                                    for (int i = 0; i < cartCount; i++)
+                                    {
+                                        originalTotal += cart[i].Price * quantities[i];
+                                    }
+
+                                    double discount = 0;
+
+                                    if (originalTotal >= 5000)
+                                    {
+                                        discount = originalTotal * 0.10;
+                                    }
+
+                                    double finalTotal = originalTotal - discount;
+
+                                    Console.WriteLine($"\nORIGINAL TOTAL: PHP {originalTotal:N2}");
+                                    Console.WriteLine($"DISCOUNT: PHP {discount:N2}");
+                                    Console.WriteLine($"FINAL TOTAL: PHP {finalTotal:N2}");
 
                                     while (true)
                                     {
@@ -299,7 +314,7 @@ class Program
                 bool hasHistory = false;
                 for (int i = 0; i < 10; i++)
                 {
-                    if (history[i] != null) // Check kung may naka-save na string
+                    if (history[i] != null)
                     {
                         Console.WriteLine(history[i]);
                         hasHistory = true;
@@ -331,7 +346,7 @@ class Program
         if (!int.TryParse(Console.ReadLine(), out inputid))
         {
             Console.WriteLine("Invalid input!");
-            return; // Ginamit ang return imbes na continue
+            return;
         }
 
         Product selectedProduct = null;
