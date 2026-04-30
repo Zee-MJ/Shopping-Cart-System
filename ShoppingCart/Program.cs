@@ -12,10 +12,10 @@ class Program
         Product[] products = new Product[7];
 
         products[0] = new Product { ID = 1, Name = "Skz Light Stick (Nachimbong)", Price = 2500, RemainingStock = 80, Category = "Official" };
-        products[1] = new Product { ID = 2, Name = "Skzoo Plush (Set)", Price = 500, RemainingStock = 250, Category = "Official" };
+        products[1] = new Product { ID = 2, Name = "Skzoo Plush (Set)", Price = 3000, RemainingStock = 250, Category = "Official" };
         products[2] = new Product { ID = 3, Name = "Varsity Jacket(STAY Edition)", Price = 650, RemainingStock = 500, Category = "Jacket" };
-        products[3] = new Product { ID = 4, Name = "DOIT BluetoothSpeaker", Price = 1000, RemainingStock = 350, Category = "Electronics" };
-        products[4] = new Product { ID = 5, Name = "Skzoo Bluetooth Headphones", Price = 1500, RemainingStock = 247, Category = "Electronics" };
+        products[3] = new Product { ID = 4, Name = "DOIT Speaker", Price = 2500, RemainingStock = 350, Category = "Electronics" };
+        products[4] = new Product { ID = 5, Name = "Skzoo Bluetooth Headphones", Price = 1700, RemainingStock = 247, Category = "Electronics" };
         products[5] = new Product { ID = 6, Name = "SKZOO Acrylic Keychain(Random Blind Pack)", Price = 125, RemainingStock = 10000, Category = "FanMade" };
         products[6] = new Product { ID = 7, Name = "SKZ polaroid-style sticker pack(5 pcs)", Price = 50, RemainingStock = 15, Category = "FanMade" };
 
@@ -57,9 +57,10 @@ class Program
                     {
                         //DISPLAY ALL PRODUCTS
                         case "1":
+                        Console.WriteLine("\n--- PRODUCTS ---");
                             foreach (Product p in products)
                             {
-                                p.DisplayProduct(); //calling the method
+                                p.DisplayProduct();
                                 
                             }
                             AddToCart(products, cart, quantities, ref cartCount);
@@ -259,9 +260,9 @@ class Program
                                     while (true)
                                     {
                                         Console.Write("\nPayment: ");
-                                        if (double.TryParse(Console.ReadLine(), out double pay) && pay >= bill)
+                                        if (double.TryParse(Console.ReadLine(), out double pay) && pay >= finalTotal)
                                         {
-                                            Console.WriteLine("\nChange: " + (pay - bill));
+                                            Console.WriteLine("\nChange: " + (pay - finalTotal));
                                             break;
                                         }
                                         Console.WriteLine("Invalid payment!");
@@ -269,32 +270,47 @@ class Program
 
                                     if (receiptNumber <= 10)
                                     {
-                                        history[receiptNumber - 1] = $"Receipt #{receiptNumber:D4} - Total: P{bill:N2} - {DateTime.Now}";
+                                        history[receiptNumber - 1] = $"Receipt #{receiptNumber:D4} - Total: P{finalTotal:N2} - {DateTime.Now}";
                                         receiptNumber++;
                                     }
 
                                     Console.WriteLine("\n--- LOW STOCK ALERT ---");
-                                    foreach (Product p in products) if (p.RemainingStock <= 5) Console.WriteLine($"ALERT: {p.Name} - {p.RemainingStock} left");
+
+                                    foreach (Product p in products)
+                                    {
+                                        if (p.RemainingStock <= 5)
+                                        {
+                                            Console.WriteLine($"ALERT: {p.Name} - Only {p.RemainingStock} left");
+                                        }
+                                    }
 
                                     cartCount = 0;
                                     inCartMenu = false;
 
                                     string rep = "";
+
                                     while (true)
                                     {
                                         Console.Write("\nAnother transaction? (Y/N): ");
                                         rep = Console.ReadLine().ToUpper();
-                                        if (rep == "Y" || rep == "N") break;
-                                    }
-                                    if (rep == "N")
-                                    {
-                                        running = false;
+
+                                        if (rep == "Y" || rep == "N")
+                                        {
+                                            break;
+                                        }
+
+                                        Console.WriteLine("Invalid input, please enter Y or N only.");
+                                        }
+
+                                        if (rep == "N")
+                                        {
+                                            running = false;
 
                                         Console.WriteLine("Goodbye! :3");
                                         Console.WriteLine("\nPress any key to close...");
                                         Console.ReadLine();
-                                    }
-                                break;
+                                        }
+                                        break;
 
                                 case "6": inCartMenu = false; 
                                     break;
@@ -404,9 +420,17 @@ class Program
         }
         else
         {
-            if (cartCount >= 5)
+            int totalQty = 0;
+
+            for (int i = 0; i < cartCount; i++)
             {
-                Console.WriteLine("Cart is full.");
+                totalQty += quantities[i];
+            }
+
+            if (totalQty + inputqty > 5)
+            {
+                Console.WriteLine("Cart limit reached (max 5 items total)!");
+                return;
             }
             else
             {
