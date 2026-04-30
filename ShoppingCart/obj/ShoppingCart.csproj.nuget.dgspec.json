@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Marienor\\OneDrive - TBG SHARED SERVICES, INC\\Desktop\\C# Project\\ShoppingCart\\ShoppingCart.csproj": {}
+    "c:\\Users\\Marienor\\OneDrive - TBG SHARED SERVICES, INC\\Desktop\\C# Project\\ShoppingCart\\ShoppingCart.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Marienor\\OneDrive - TBG SHARED SERVICES, INC\\Desktop\\C# Project\\ShoppingCart\\ShoppingCart.csproj": {
+    "c:\\Users\\Marienor\\OneDrive - TBG SHARED SERVICES, INC\\Desktop\\C# Project\\ShoppingCart\\ShoppingCart.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Marienor\\OneDrive - TBG SHARED SERVICES, INC\\Desktop\\C# Project\\ShoppingCart\\ShoppingCart.csproj",
+        "projectUniqueName": "c:\\Users\\Marienor\\OneDrive - TBG SHARED SERVICES, INC\\Desktop\\C# Project\\ShoppingCart\\ShoppingCart.csproj",
         "projectName": "ShoppingCart",
-        "projectPath": "C:\\Users\\Marienor\\OneDrive - TBG SHARED SERVICES, INC\\Desktop\\C# Project\\ShoppingCart\\ShoppingCart.csproj",
+        "projectPath": "c:\\Users\\Marienor\\OneDrive - TBG SHARED SERVICES, INC\\Desktop\\C# Project\\ShoppingCart\\ShoppingCart.csproj",
         "packagesPath": "C:\\Users\\Marienor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Marienor\\OneDrive - TBG SHARED SERVICES, INC\\Desktop\\C# Project\\ShoppingCart\\obj\\",
+        "outputPath": "c:\\Users\\Marienor\\OneDrive - TBG SHARED SERVICES, INC\\Desktop\\C# Project\\ShoppingCart\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Marienor\\AppData\\Roaming\\NuGet\\NuGet.Config"
